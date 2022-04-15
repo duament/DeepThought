@@ -1,190 +1,190 @@
-{% macro social_links(social_config) %}
+{%- macro social_links(social_config) %}
 <p>
 
-  {% if social_config.google_scholar %}
-  <a href="https://scholar.google.com/citations?user={{ social_config.google_scholar }}" target="_blank">
+  {%- if social_config.google_scholar %}
+  <a href="https://scholar.google.com/citations?user={{ social_config.google_scholar }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="Google Scholar">
-			<i class="ai ai-google-scholar ai-lg"></i>
+      {{ svg::google_scholar() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.orcid %}
-  <a href="https://orcid.org/{{ social_config.orcid }}" target="_blank">
+  {%- if social_config.orcid %}
+  <a href="https://orcid.org/{{ social_config.orcid }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="ORCiD">
-      <i class="fab fa-orcid fa-lg"></i>
+      {{ svg::orcid() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.facebook %}
-  <a href="https://facebook.com/{{ social_config.facebook }}" target="_blank">
+  {%- if social_config.facebook %}
+  <a href="https://facebook.com/{{ social_config.facebook }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="Facebook">
-      <i class="fab fa-facebook fa-lg"></i>
+      {{ svg::facebook() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.twitter %}
-  <a href="https://twitter.com/{{ social_config.twitter }}" target="_blank">
+  {%- if social_config.twitter %}
+  <a href="https://twitter.com/{{ social_config.twitter }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="Twitter">
-      <i class="fab fa-twitter fa-lg"></i>
+      {{ svg::twitter() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.linkedin %}
-  <a href="https://www.linkedin.com/in/{{ social_config.linkedin }}" target="_blank">
+  {%- if social_config.linkedin %}
+  <a href="https://www.linkedin.com/in/{{ social_config.linkedin }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="LinkedIn">
-      <i class="fab fa-linkedin fa-lg"></i>
+      {{ svg::linkedin() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.github %}
-  <a href="https://github.com/{{ social_config.github }}" target="_blank">
+  {%- if social_config.github %}
+  <a href="https://github.com/{{ social_config.github }}" target="_blank" class="is-size-4" class="is-size-4">
     <span class="icon is-large" title="GitHub">
-      <i class="fab fa-github fa-lg"></i>
+      {{ svg::github() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.gitlab %}
-  <a href="https://gitlab.com/{{ social_config.gitlab }}" target="_blank">
+  {%- if social_config.gitlab %}
+  <a href="https://gitlab.com/{{ social_config.gitlab }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="GitLab">
-      <i class="fab fa-gitlab fa-lg"></i>
+      {{ svg::gitlab() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.stackoverflow %}
-  <a href="https://stackoverflow.com/users/{{ social_config.stackoverflow }}" target="_blank">
+  {%- if social_config.stackoverflow %}
+  <a href="https://stackoverflow.com/users/{{ social_config.stackoverflow }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="Stack Overflow">
-      <i class="fab fa-stack-overflow fa-lg"></i>
+      {{ svg::stackoverflow() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.keybase %}
-  <a href="https://keybase.io/{{ social_config.keybase }}" target="_blank">
+  {%- if social_config.keybase %}
+  <a href="https://keybase.io/{{ social_config.keybase }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="Keybase">
-      <i class="fab fa-keybase fa-lg"></i>
+      {{ svg::keybase() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.mastodon %}
-  <a href="https://mastodon.social/{{ social_config.mastodon }}" target="_blank">
+  {%- if social_config.mastodon %}
+  <a href="https://mastodon.social/{{ social_config.mastodon }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="Mastodon">
-      <i class="fab fa-mastodon fa-lg"></i>
+      {{ svg::mastodon() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.instagram %}
-  <a href="https://www.instagram.com/{{ social_config.instagram}}" target="_blank">
+  {%- if social_config.instagram %}
+  <a href="https://www.instagram.com/{{ social_config.instagram}}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="Instagram">
-      <i class="fab fa-instagram fa-lg"></i>
+      {{ svg::instagram() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.behance %}
-  <a href="https://www.behance.net/{{ social_config.behance }}" target="_blank">
+  {%- if social_config.behance %}
+  <a href="https://www.behance.net/{{ social_config.behance }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="Behance">
-      <i class="fab fa-behance fa-lg"></i>
+      {{ svg::behance() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.email %}
-  <a href="mailto:{{ social_config.email }}" target="_blank">
+  {%- if social_config.email %}
+  <a href="mailto:{{ social_config.email }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="Email">
-      <i class="far fa-envelope fa-lg"></i>
+      {{ svg::envelope() }}
     </span>
   </a>
-  {% endif %}
-  
-  {% if social_config.medium %}
-  <a href="https://medium.com/@{{ social_config.medium }}" target="_blank">
+  {%- endif %}
+
+  {%- if social_config.medium %}
+  <a href="https://medium.com/@{{ social_config.medium }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="Medium">
-      <i class="fab fa-medium fa-lg"></i>
+      {{ svg::medium() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if social_config.googleplay %}
-  <a href="https://play.google.com/store/apps/developer?id={{ social_config.googleplay }}&hl=en" target="_blank">
+  {%- if social_config.googleplay %}
+  <a href="https://play.google.com/store/apps/developer?id={{ social_config.googleplay }}&hl=en" target="_blank" class="is-size-4">
     <span class="icon is-large" title="Google play">
-      <i class="fab fa-google-play fa-lg"></i>
+      {{ svg::google_play() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 
-  {% if config.generate_feed %}
-  <a href="{{ config.base_url }}/{{ config.feed_filename }}" target="_blank">
+  {%- if config.generate_feed %}
+  <a href="{{ config.base_url }}/{{ config.feed_filename }}" target="_blank" class="is-size-4">
     <span class="icon is-large" title="RSS Feed">
-      <i class="fas fa-rss fa-lg"></i>
+      {{ svg::rss() }}
     </span>
   </a>
-  {% endif %}
+  {%- endif %}
 </p>
-{% endmacro %}
+{%- endmacro %}
 
-{% macro page_publish_metadata(page) %}
+{%- macro page_publish_metadata(page) %}
 <span class="icon-text has-text-grey">
   <span class="icon">
-    <i class="fas fa-user"></i>
+    {{ svg::user() }}
   </span>
   <span>{{ config.extra.author.name }} published on</span>
   <span class="icon">
-    <i class="far fa-calendar-alt"></i>
+    {{ svg::calendar_days() }}
   </span>
   <span><time datetime="{{ page.date }}">{{ page.date | date(format='%B %d, %Y') }}</time></span>
 </span>
-{% endmacro %}
+{%- endmacro %}
 
-{% macro page_content_metadata(page) %}
+{%- macro page_content_metadata(page) %}
 <span class="icon-text has-text-grey">
   <span class="icon">
-    <i class="far fa-clock"></i>
+    {{ svg::clock() }}
   </span>
   <span>{{ page.reading_time }} min,</span>
   <span class="icon">
-    <i class="fas fa-pencil-alt"></i>
+    {{ svg::pencil() }}
   </span>
   <span>{{ page.word_count }} words</span>
 </span>
-{% endmacro %}
+{%- endmacro %}
 
-{% macro render_categories(categories) %}
+{%- macro render_categories(categories) %}
 <p>
   Categories:
-  {% for category in categories %}
+  {%- for category in categories %}
   <a class="has-text-info-dark has-text-weight-semibold" href="{{ get_taxonomy_url(kind='categories', name=category) }}">
     <span class="icon-text">
       <span class="icon">
-        <i class="fas fa-cube"></i>
+        {{ svg::cube() }}
       </span>
       <span>{{category}}</span>
     </span>
   </a>
-  {% endfor %}
+  {%- endfor %}
 </p>
-{% endmacro %}
+{%- endmacro %}
 
-{% macro render_tags(tags) %}
+{%- macro render_tags(tags) %}
 <p>
   Tags:
-  {% for tag in tags %}
+  {%- for tag in tags %}
   <a class="has-text-info-dark has-text-weight-semibold" href="{{ get_taxonomy_url(kind='tags', name=tag) }}">
     <span class="icon-text">
       <span class="icon">
-        <i class="fas fa-tag"></i>
+        {{ svg::tag() }}
       </span>
       <span>{{tag}}</span>
     </span>
   </a>
-  {% endfor %}
+  {%- endfor %}
 </p>
-{% endmacro %}
+{%- endmacro %}

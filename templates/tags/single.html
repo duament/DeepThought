@@ -8,7 +8,7 @@
         <h1 class="title">
           <span class="icon-text">
             <span class="icon">
-              <i class="fas fa-tag"></i>
+              {{ svg::tag() }}
             </span>
             <span>{{ term.name }}</span>
           </span>
@@ -49,9 +49,11 @@
           <div class="content mt-2">
             {{ page.summary | safe }}
             <a href='{{ page.permalink }}'>
-              Read More
-              <span class="icon is-small">
-                <i class="fas fa-arrow-right fa-xs"></i>
+              <span class="icon-text">
+                <span>Read More</span>
+                <span class="icon">
+                  {{ svg::arrow_right() }}
+                </span>
               </span>
             </a>
           </div>

@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="section">
+<section class="section is-align-items-center is-flex">
   <div class="container">
     <div class="has-text-centered">
       <h1 class="title is-2">
         <span class="icon">
-          <i class="fas fa-cubes"></i>
+          {{ svg::cubes() }}
         </span>
         Categories
       </h1>
@@ -15,7 +15,7 @@
         {% for category in terms %}
         <a href="{{ get_taxonomy_url(kind='categories', name=category.name) }}" class="mr-4">
           <span class="icon">
-            <i class="fas fa-cube"></i>
+            {{ svg::cube() }}
           </span>
           <span>{{category.name}} <sup>{{ category.pages | length }}</sup></span>
         </a>

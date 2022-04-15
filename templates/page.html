@@ -81,7 +81,7 @@
           <div class="level-item has-text-centered">
             <a class="button is-black is-outlined" href="{{ page.later.permalink }}">
               <span class="icon mr-2">
-                <i class="fas fa-arrow-circle-left"></i>
+                {{ svg::circle_arrow_left() }}
               </span>
               {{ page.later.title }}
             </a>
@@ -90,7 +90,7 @@
           <div class="level-item has-text-centered">
             <a class="button is-black is-outlined" href="{{ page.earlier.permalink }}">
               {{ page.earlier.title }}<span class="icon ml-2">
-                <i class="fas fa-arrow-circle-right"></i>
+                {{ svg::circle_arrow_right() }}
               </span>
             </a>
           </div>
@@ -98,7 +98,7 @@
           <div class="level-item has-text-centered">
             <a class="button is-black is-outlined" href="{{ page.heavier.permalink }}">
               <span class="icon mr-2">
-                <i class="fas fa-arrow-circle-left"></i>
+                {{ svg::circle_arrow_left() }}
               </span>
               {{ page.heavier.title }}
             </a>
@@ -107,7 +107,7 @@
           <div class="level-item has-text-centered">
             <a class="button is-black is-outlined" href="{{ page.lighter.permalink }}">
               {{ page.lighter.title }}<span class="icon ml-2">
-                <i class="fas fa-arrow-circle-right"></i>
+                {{ svg::circle_arrow_right() }}
               </span>
             </a>
           </div>
@@ -150,6 +150,9 @@
     const current = navSections[tocIndex];
     const next = tocIndex < tocItems.length - 1 ? navSections[tocIndex + 1]
       : document.querySelectorAll("section.section").item(1);
+    if (next === null) {
+      return true;
+    }
 
     const c = current.getBoundingClientRect();
     const n = next.getBoundingClientRect();

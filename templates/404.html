@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
-<section class="section">
+<section class="section is-align-items-center is-flex">
   <div class="container">
     <div class="has-text-centered">
       <h1 class="title is-2">HTTP 404</h1>
@@ -18,7 +17,7 @@
       <p class="my-6">
         <a href='{{ config.base_url }}'>
           <span class="icon">
-            <i class="fas fa-home"></i>
+            {{ svg::house() }}
           </span>
           <span>Home</span>
         </a>

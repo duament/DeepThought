@@ -1,23 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="section">
+<section class="section is-align-items-center is-flex">
   <div class="container">
     <div class="has-text-centered">
       <h1 class="title is-2">
-        <span class="icon">
-          <i class="fas fa-tags"></i>
+        <span class="icon-text">
+          <span class="icon is-medium">
+            {{ svg::tags() }}
+          </span>
+          <span>Tags</span>
         </span>
-        Tags
       </h1>
       <p class='subtitle is-4'>{{ terms | length }} tags in total</p>
       <p>
         {% for tag in terms %}
         <a href="{{ get_taxonomy_url(kind='tags', name=tag.name) }}" class="mr-4">
-          <span class="icon">
-            <i class="fas fa-tag"></i>
+          <span class="icon-text">
+            <span class="icon">
+              {{ svg::tag() }}
+            </span>
+            <span>{{tag.name}} </span>
           </span>
-          <span>{{tag.name}} <sup>{{ tag.pages | length }}</sup></span>
+          <sup>{{ tag.pages | length }}</sup>
         </a>
         {% endfor %}
       </p>
