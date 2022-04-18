@@ -1,5 +1,23 @@
 @charset "utf-8"
 
+// Update Bulma's global variables
+$family-sans-serif: 'Jost', sans-serif
+$family-monospace: 'Hack', monospace
+$footer-padding: 1.0rem 2.5rem
+
+@import "../bulma/sass/base/_all.sass"
+@import "../bulma/sass/utilities/_all.sass"
+@import "../bulma/sass/grid/columns.sass"
+@import "../bulma/sass/elements/_all.sass"
+@import "../bulma/sass/components/level.sass"
+@import "../bulma/sass/components/menu.sass"
+@import "../bulma/sass/components/modal.sass"
+@import "../bulma/sass/components/navbar.sass"
+@import "../bulma/sass/components/pagination.sass"
+@import "../bulma/sass/form/_all.sass"
+@import "../bulma/sass/layout/_all.sass"
+@import "../bulma/sass/helpers/_all.sass"
+
 @font-face
   font-family: 'Jost'
   font-display: swap
@@ -12,25 +30,16 @@
   font-style: normal
   src: local('Hack-Regular'), url('hack-regular-subset.woff2')
 
-// Update Bulma's global variables
-$family-sans-serif: 'Jost', sans-serif
-$family-monospace: 'Hack', monospace
-$footer-padding: 1.0rem 2.5rem
-
 html
   scroll-behavior: smooth
 
 body
-  font-family: $family-sans-serif
   display: flex
   flex-direction: column
   min-height: 100vh
 
 body[theme="dark"]
   filter: invert(1) hue-rotate(180deg)
-
-code, pre
-  font-family: $family-monospace
 
 section
   flex: 1
